@@ -5,28 +5,32 @@
   <div class="card-body">
     <form [formGroup]="profileForm" class="example-form">
 
-      <h5 class="card-title">Deatails</h5>
-      <p *ngIf="!flage" class="card-text"> adress:{{theChoosernSupplier.adress}}</p>
+      <h5 class="card-title tit">supplier name : {{theChoosernSupplier.name}}</h5>
+
+      address:
+      <p *ngIf="!flage" class="card-text"> {{theChoosernSupplier.adress}}</p>
       <mat-form-field *ngIf="flage" class="example-full-width">
         <input matInput placeholder="address" formControlName="adress" value="{{theChoosernSupplier.adress}}">
       </mat-form-field>
-      <p *ngIf="!flage" class="card-text"> phone:{{theChoosernSupplier.phone}}</p>
-
+      phone:
+      <p *ngIf="!flage" class="card-text"> {{theChoosernSupplier.phone}}</p>
+      
       <mat-form-field *ngIf="flage" class="example-full-width">
         <input matInput placeholder="phone" formControlName="phone" value="{{theChoosernSupplier.phone}}">
       </mat-form-field>
-      <p *ngIf="!flage" class="card-text"> id:{{theChoosernSupplier.id}}</p>
+      id:
+      <p *ngIf="!flage" class="card-text"> {{theChoosernSupplier.id}}</p>
 
       <mat-form-field *ngIf="flage" class="example-full-width">
 
         <input matInput placeholder="id" formControlName="id" value="{{theChoosernSupplier.id}}">
       </mat-form-field>
-      :
-      <p *ngIf="!flage" class="card-text"> email:{{theChoosernSupplier.email}}</p>
+      email:
+      <p *ngIf="!flage" class="card-text"> {{theChoosernSupplier.email}}</p>
       <mat-form-field *ngIf="flage" class="example-full-width">
         <input matInput placeholder="enter email" formControlName="email" value="{{theChoosernSupplier.email}}">
       </mat-form-field>
-
+        services:
       <div *ngFor=" let talk of theChoosernSupplier.service let i=index ">
         <div *ngIf="!flage">
           * {{talk}}

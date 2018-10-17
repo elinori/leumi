@@ -28,7 +28,8 @@ export class DetailsComponent implements OnInit {
       id: [this.theChoosernSupplier.id],
       services: [this.theChoosernSupplier.service],
       phone: [this.theChoosernSupplier.phone],
-      email: [this.theChoosernSupplier.email]
+      email: [this.theChoosernSupplier.email],
+      name:[this.theChoosernSupplier.name]
 
     });
 

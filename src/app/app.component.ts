@@ -12,6 +12,7 @@ export class AppComponent {
   haader=false;
  constructor( public service:HttpserviceService,private route:Router){
    this.route.navigate(['/suppliers'])
+
 }
 ex(event){
   this.service.getName()['name']=event

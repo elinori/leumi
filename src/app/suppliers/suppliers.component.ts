@@ -18,9 +18,10 @@ export class SuppliersComponent implements OnInit {
   c: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private service: HttpserviceService, private route: Router) {
-
+         
     service.getsuppliers().subscribe(x => {
-    this.suppliers = x
+      this.suppliers = x
+      this.temp=this.suppliers;
       for (let index = 0; index < this.suppliers.length; index++) {
         const element = this.service.getName()['id'];
         this.id.push(this.suppliers[index]['id']);
@@ -64,21 +65,24 @@ export class SuppliersComponent implements OnInit {
 
   }
   clickme(t) {
+    t=t.toLowerCase();
+
     if (t === "") {
       this.suppliers = this.temp;
     }
-    else {
-      t = t.toLowerCase();
 
+    else {
       this.suppliers = this.suppliers.filter(it =>
-        it.name.toLowerCase().includes(t) || it.id.includes(t)
+        (it.name.toLowerCase().includes(t))
 
       )
+
     }
 
   }
   add() {
     this.f = true;
+    this.service.setname(null);
     this.route.navigate(['/add']);
   }
   ngOnInit() {
