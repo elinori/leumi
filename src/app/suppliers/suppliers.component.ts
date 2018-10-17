@@ -18,53 +18,42 @@ export class SuppliersComponent implements OnInit {
   c: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private service: HttpserviceService, private route: Router) {
-         
+         this.f=false
     service.getsuppliers().subscribe(x => {
       this.suppliers = x
       this.temp=this.suppliers;
+      this.suppliers.push(this.service.getName());
+
       for (let index = 0; index < this.suppliers.length; index++) {
         const element = this.service.getName()['id'];
         this.id.push(this.suppliers[index]['id']);
         if (this.suppliers[index]['id'] === element) {
           this.suppliers[index]['adress'] = this.service.getName()['adress'];
-
-
+          this.suppliers[index]['email'] = this.service.getName()['email'];
+          this.suppliers[index]['name'] = this.service.getName()['name'];
           this.suppliers[index] = this.service.getName();
         }
 
 
       }
-      if (this.id.indexOf(this.service.getName()['id']) < 0) {
-        console.log(this.id.indexOf(this.service.getName()['id']))
-        this.suppliers.push(this.service.getName())
-
-      }
-      this.service.setSup(this.suppliers);
-
-      this.suppliers = this.service.getSup();
-
 
     }
     );
-
-
-
-
-
   }
 
   ex(event) {
-    console.log("ccc" + event)
+    this.f=!this.f;
     this.suppliers.push(event);
   }
   setClickedRow(s) {
+    this.f=true;
     this.c.emit(s['name'])
     this.service.setname(s);
     this.route.navigate(['/details']);
 
 
   }
-  clickme(t) {
+  search(t) {
     t=t.toLowerCase();
 
     if (t === "") {

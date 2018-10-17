@@ -31,9 +31,7 @@ export class AddsupplierComponent implements OnInit {
     });
   }
   add(p) {
-    console.log("fdf")
 
-    console.log(p.value)
     this.service.setname(p.value)
     this.b.emit(p.value);
     this.route.navigate(['./suppliers'])
