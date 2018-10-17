@@ -1,0 +1,21 @@
+{
+
+"suplires":[
+    {"id":1,"name":"gal","adress":"fgfgfgfg3 fgfg","phone":"08743333","email":"gal@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]},
+    {"id":2,"name":"gal","adress":"aaaaaa","phone":"12343434","email":"hila@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]},
+    {"id":3,"name":"gal","adress":"nnnnnn fgfg","phone":"78798989","email":"hen@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]},
+    {"id":4,"name":"gal","adress":"mmmmmmm fgfg","phone":"08743333","email":"dan@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]},
+    {"id":5,"name":"gal","adress":"ngngngngng fgfg","phone":"454545454","email":"miri@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]},
+    {"id":6,"name":"shay","adress":"uuuuuuuu fgfg","phone":"3232323","email":"shay@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]},  
+    {"id":7,"name":"din","adress":"llllllll fgfg","phone":"4454656565","email":"din@fdfdf.com","service":["rrrr","dfdfdfdf","gfgfgfg"]}
+
+
+
+
+
+
+
+]
+
+
+}

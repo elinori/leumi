@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">
+    Details of the Supplier :)
+  </div>
+  <div class="card-body">
+    <form [formGroup]="profileForm" class="example-form">
+
+      <h5 class="card-title">Deatails</h5>
+      <p *ngIf="!flage" class="card-text"> adress:{{theChoosernSupplier.adress}}</p>
+      <mat-form-field *ngIf="flage" class="example-full-width">
+        <input matInput placeholder="address" formControlName="adress" value="{{theChoosernSupplier.adress}}">
+      </mat-form-field>
+      <p *ngIf="!flage" class="card-text"> phone:{{theChoosernSupplier.phone}}</p>
+
+      <mat-form-field *ngIf="flage" class="example-full-width">
+        <input matInput placeholder="phone" formControlName="phone" value="{{theChoosernSupplier.phone}}">
+      </mat-form-field>
+      <p *ngIf="!flage" class="card-text"> id:{{theChoosernSupplier.id}}</p>
+
+      <mat-form-field *ngIf="flage" class="example-full-width">
+
+        <input matInput placeholder="id" formControlName="id" value="{{theChoosernSupplier.id}}">
+      </mat-form-field>
+      :
+      <p *ngIf="!flage" class="card-text"> email:{{theChoosernSupplier.email}}</p>
+      <mat-form-field *ngIf="flage" class="example-full-width">
+        <input matInput placeholder="enter email" formControlName="email" value="{{theChoosernSupplier.email}}">
+      </mat-form-field>
+
+      <div *ngFor=" let talk of theChoosernSupplier.service let i=index ">
+        <div *ngIf="!flage">
+          * {{talk}}
+
+        </div>
+        <mat-form-field *ngIf="flage" class="example-full-width">
+          <input matInput placeholder="services" formControlName="services" value="service i">
+        </mat-form-field>
+
+      </div>
+    </form>
+
+    <button mat-button style="background-color: grey;margin-left: 5%" (click)="edite()">Edite</button>
+    <button mat-button style="background-color: grey;margin-left: 5%" (click)="save(profileForm)">Save</button>
+
+  </div>
+
+</div>

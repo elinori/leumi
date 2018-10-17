@@ -1,0 +1,31 @@
+<div *ngIf="!f" style="margin-right: 5%">
+  <mat-form-field style="margin-left:5% ">
+    <input matInput placeholder="Input" [(ngModel)]="bla">
+  </mat-form-field>
+  <button mat-button class="but" (click)="clickme(bla)">Search</button>
+  <button mat-button class="but c"  (click)="add()">Add supplier</button>
+
+</div>
+<div class="bb">
+  <mat-list class="bla" *ngFor="let s of suppliers let i = index" (click)="setClickedRow(s)" [class.active]="i == selectedRow">
+    <mat-list-item class="item">
+      {{s.name}}
+
+    </mat-list-item>
+    <div style="margin-right: 50%">
+      <h6>
+        address:{{s.adress}}
+        <br> email:{{s.email}}
+      </h6>
+
+    </div>
+
+  </mat-list>
+
+
+</div>
+
+<div *ngIf="f">
+  <app-addsupplier (b)="ex($event)"></app-addsupplier>
+
+</div>

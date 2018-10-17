@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <form [formGroup]="profileForm" class="example-form">
+
+      <h5 class="card-title">Deatails</h5>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="title" formControlName="name">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="adress" formControlName="adress">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="phone" formControlName="phone">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput placeholder="id" formControlName="id">
+      </mat-form-field>
+      :
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="enter email" formControlName="email">
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="services" formControlName="services">
+      </mat-form-field>
+
+    </form>
+
+    <button mat-button class="but" (click)="add(profileForm)">Save</button>
+
+  </div>
+
+</div>
